@@ -11,4 +11,13 @@ public class View {
 	private int gcd(int a, int b){
 		return (1 + 1);
 	}
+	public int sum(int n){
+		int sum = 0;
+		for(int i = 0; i <= n; i++){
+			int x = (n/gcd(i,n));
+			sum = sum + x;
+		
+		}
+		return sum;
+	}
 }
