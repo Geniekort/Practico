@@ -8,4 +8,7 @@ public class View {
 		return s.nextInt();
 		
 	}
+	private int gcd(int a, int b){
+		return 0;
+	}
 }
