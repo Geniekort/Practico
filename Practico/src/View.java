@@ -2,28 +2,37 @@ import java.util.Scanner;
 
 public class View {
 
-	private int getInput(){
+	public static int getInput(){
 		Scanner s = new Scanner(System.in);
 		return s.nextInt();
 		
 	}
-	private int gcd(int a, int b){
+	private static int gcd(int a, int b){
 		
-		if(a != 0 && b != 0){
-			int temp = 0; // Get a/b
-			temp = a/b;
-			return gcd(a, a - b * temp);
+		for(int i = Math.max(a, b); i > 0; i--){
+			if(a % i == 0 && b % i == 0){
+				return i;
+			}
 		}
-		else return Math.max(a,b);
+		return 1;
 	}
 	
-	public int sum(int n){
+	public static int sum(int n){
 		int sum = 0;
-		for(int i = 0; i <= n; i++){
+		for(int i = 1; i <= n; i++){
 			int x = (n/gcd(i,n));
 			sum = sum + x;
 		
 		}
 		return sum;
+	}
+	
+	public static void main(String[] args) {
+		for(int i = View.getInput(); i > 0; i--){
+			System.out.println(View.sum(View.getInput()));
+			
+		}
+		
+		
 	}
 }
