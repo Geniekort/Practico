@@ -5,6 +5,7 @@ public class View {
 	private int getInput(){
 		Scanner s = new Scanner(System.in);
 		System.out.println("hoi");
+		System.out.println("Ook hoi");
 		return s.nextInt();
 		
 	}
