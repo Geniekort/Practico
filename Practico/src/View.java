@@ -16,6 +16,7 @@ public class View {
 		}
 		else return Math.max(a,b);
 	}
+	
 	public int sum(int n){
 		int sum = 0;
 		for(int i = 0; i <= n; i++){
